@@ -1,0 +1,15 @@
+Packaging sources: MPL-2.0; see LICENSE.
+
+MODEL PROVENANCE
+The supplied model is a fine-tuned derivative of
+sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2,
+from Sentence Transformers / Hugging Face, based on Microsoft's MiniLM.
+Upstream model card: https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+Upstream license: Apache-2.0. The weights are distributed under Apache-2.0,
+not under the packaging source code's MPL-2.0 license.
+The model was modified by fine-tuning, vocabulary trimming and quantization.
+Release metadata records the training source commit and export configuration.
+See MODEL_LICENSE.txt for the Apache-2.0 license text.
+
+The matching tokenizer is distributed with each model. Apple Core ML and
+Foundation are system frameworks and are not redistributed.

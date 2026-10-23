@@ -1,0 +1,14 @@
+.build/
+.swiftpm/
+build/
+inputs/
+*.xcframework/
+*.mlpackage/
+*.mlmodelc/
+*.bin
+*.zip
+__pycache__/
+*.pyc
+.DS_Store
+
+.venv/

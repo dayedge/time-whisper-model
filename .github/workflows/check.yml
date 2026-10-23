@@ -1,0 +1,14 @@
+name: Check packaging sources
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  packaging:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test_model.py
+      - run: python3 scripts/test_release.py
+      # Trained exports are deliberately absent from Git. Release validation below never skips missing models.

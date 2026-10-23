@@ -1,0 +1,3 @@
+# The packaging, qualification and smoke-test scripts use only the Python standard library.
+# No third-party Python packages are required here.
+# To export a trained model, install time-whisper/requirements.txt as described in README.md.
