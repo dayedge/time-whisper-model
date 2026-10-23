@@ -27,7 +27,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   prepare:
-    runs-on: macos-15
+    # The corpus check runs the system spell checker, whose Polish suggestions differ between macOS versions: qualify
+    # on the version the accepted corpus lists were made on.
+    runs-on: macos-26
     env:
       GH_TOKEN: ${{ github.token }}
       VERSION: ${{ inputs.version }}
