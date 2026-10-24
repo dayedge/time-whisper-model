@@ -189,7 +189,10 @@ to be copied by hand.
 
 It checks that the source is clean and available on GitHub, creates the draft release,
 uploads the selected archives, and starts **Prepare model release**. It does not push source or
-publish the release. On retry, it can reuse an existing draft and replace its input archives;
+publish the release. The workflow rebuilds and reruns the library's tests and every corpus with the
+selected model, but does not gate on the corpus: the system spell checker differs between Macs, so
+that gate is the local qualification above. The corpus reports are kept as a run artifact. On retry,
+it can reuse an existing draft and replace its input archives;
 it refuses published versions or versions whose release tag already exists.
 
 To preview the commands without making any GitHub calls:
